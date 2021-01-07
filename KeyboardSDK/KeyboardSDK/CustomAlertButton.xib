@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomAlertButton" customModule="KeyboardSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="219" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9r-I5-MFP">
+                    <rect key="frame" x="0.0" y="0.0" width="219" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Send to ATM" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-rV-uwy">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="tintColor" name="darkButton"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1Ta-C3-ebG"/>
+                                <constraint firstAttribute="width" constant="50" id="8ym-G5-6gT"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owK-57-RLM">
+                            <rect key="frame" x="55" y="0.0" width="159" height="50"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vNB-rV-uwy" firstAttribute="top" secondItem="z9r-I5-MFP" secondAttribute="top" id="8Oz-OG-IfB"/>
+                        <constraint firstItem="owK-57-RLM" firstAttribute="top" secondItem="z9r-I5-MFP" secondAttribute="top" id="Cko-Mw-9SR"/>
+                        <constraint firstAttribute="bottom" secondItem="owK-57-RLM" secondAttribute="bottom" id="EOf-Yu-7Za"/>
+                        <constraint firstAttribute="trailing" secondItem="owK-57-RLM" secondAttribute="trailing" constant="5" id="FNo-GU-5xP"/>
+                        <constraint firstItem="vNB-rV-uwy" firstAttribute="leading" secondItem="z9r-I5-MFP" secondAttribute="leading" id="gMb-1C-ygg"/>
+                        <constraint firstItem="owK-57-RLM" firstAttribute="leading" secondItem="vNB-rV-uwy" secondAttribute="trailing" constant="5" id="rYd-jr-vby"/>
+                        <constraint firstAttribute="bottom" secondItem="vNB-rV-uwy" secondAttribute="bottom" id="vQ5-Bt-cDx"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vhM-q7-ZG2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="z9r-I5-MFP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Bk-4w-YRm"/>
+                <constraint firstAttribute="bottom" secondItem="z9r-I5-MFP" secondAttribute="bottom" id="AA6-dX-51I"/>
+                <constraint firstItem="z9r-I5-MFP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B3M-G4-469"/>
+                <constraint firstItem="z9r-I5-MFP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="kLc-ho-HyQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buttonView" destination="z9r-I5-MFP" id="WK8-uu-31L"/>
+                <outlet property="logoImageView" destination="vNB-rV-uwy" id="QKS-oj-apX"/>
+                <outlet property="textLabel" destination="owK-57-RLM" id="TwB-6A-P99"/>
+            </connections>
+            <point key="canvasLocation" x="-3.6231884057971016" y="-93.75"/>
+        </view>
+        <view contentMode="scaleToFill" id="jP3-H3-E4H" customClass="HeaderButtonView" customModule="KeyboardSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeK-Oi-cWn">
+                    <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="8zL-mY-82f"/>
+            <point key="canvasLocation" x="-241.30434782608697" y="-4.0178571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Send to ATM" width="36" height="36"/>
+        <namedColor name="darkButton">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

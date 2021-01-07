@@ -1,0 +1,101 @@
+//
+//  KeyboardParentViewController+Buttons.swift
+//
+
+import UIKit
+
+extension KeyboardParentViewController {
+    
+    func button(for action: KeyboardAction, distribution: UIStackView.Distribution = .equalSpacing) -> UIView {
+        if action == .none { return KeyboardSpacerView(width: 10) }
+        let view = DemoButton.fromNib(owner: self)
+        view.flag = false
+        view.setup(with: action, in: self, distribution: distribution)
+        view.keyboardType = keyboardType
+        
+        return view
+    }
+
+    func custombutton(for action: KeyboardAction, distribution: UIStackView.Distribution = .equalSpacing) -> UIView {
+        if action == .none { return KeyboardSpacerView(width: 10) }
+        let view = CustomAlertButton.fromNib(owner: self)
+        view.flag = false
+        view.setup(with: action, in: self, distribution: distribution)
+        view.keyboardType = keyboardType
+
+        return view
+    }
+
+    func buttonCollection(for action: KeyboardAction,distribution: UIStackView.Distribution = .equalSpacing) -> UIView {
+        
+//        if (action.getImageDescription == "Send to wallet") || (action.getImageDescription == "Send to ATM") || (action.getImageDescription == "History"){
+//            if action == .none { return KeyboardSpacerView(width: 1) }
+//            let view = DemoButton.fromNib(owner: self)
+//            view.flag = true
+//            view.setupCollection(with: action, in: self, distribution: distribution)
+//            return view
+//        } else{
+            if action == .none { return KeyboardSpacerView(width: 10) }
+            let view = DemoButton.fromNib(owner: self)
+            view.flag = false
+            view.keyboardType = keyboardType
+            view.isUserInteractionEnabled = true
+            view.setupCollection(with: action, in: self, distribution: distribution)
+            return view
+//        }
+    }
+    
+    func buttonChar(for action: KeyboardAction, distribution: UIStackView.Distribution = .equalSpacing) -> UIView {
+        
+        if action == .none { return KeyboardSpacerView(width: 0) }
+        let view = DemoButton.fromNib(owner: self)
+        view.flag = false
+        view.setupChar(with: action, in: self, distribution: distribution)
+        return view
+    }
+    
+    
+    func buttonActionSheet(for action: KeyboardAction, distribution: UIStackView.Distribution = .equalSpacing) -> UIView {
+        if action == .none { return KeyboardSpacerView(width: 10) }
+        let view = CustomAlertButton.fromNib(owner: self)
+        view.flag = false
+        view.setup(with: action, in: self, distribution: distribution)
+        return view
+    }
+    
+    func buttonRow(for actions: KeyboardActionRow, distribution: UIStackView.Distribution) -> KeyboardStackViewComponent {
+        KeyboardButtonRow(actions: actions, distribution: distribution) {
+            button(for: $0, distribution: distribution)
+        }
+    }
+    
+    func custombuttonRow(for actions: KeyboardActionRow, distribution: UIStackView.Distribution) -> KeyboardStackViewComponent {
+        KeyboardCenterButtonRow(actions: actions, distribution: distribution) {
+            button(for: $0, distribution: distribution)
+        }
+    }
+    
+    func buttonRows(for actionRows: KeyboardActionRows, distribution: UIStackView.Distribution) -> [KeyboardStackViewComponent] {
+        var rows = actionRows.map {
+            buttonRow(for: $0, distribution: distribution)
+        }
+        rows.insert(headerToolbar, at: 0)
+        headerToolbar.update(with: [""])
+
+        if(paymentKeyboardOpen){
+            rows.insert(amountToolbar, at: 1)
+            amountToolbar.update(with: ["0.00"])
+        } else if enterOTPKeyboardOpen {
+            rows.insert(otpToolbar, at: 1)
+            otpToolbar.update(with: [""])
+        } else if enterPINKeyboardOpen {
+            rows.insert(pinToolbar, at: 1)
+            pinToolbar.update(with: [""])
+        } else if enterPhoneNoKeyboardOpen {
+            rows.insert(phoneToolbar, at: 1)
+            phoneToolbar.update(with: [""])
+        }
+        return rows
+    }
+    
+}

@@ -1,0 +1,848 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE05A471252EF651006AE641 /* KeyboardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC20AA9248FB82400DE2F6E /* KeyboardSDK.framework */; };
+		BE05A472252EF651006AE641 /* KeyboardSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEC20AA9248FB82400DE2F6E /* KeyboardSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE5FB54B24600DC8008A41FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB54A24600DC8008A41FA /* AppDelegate.swift */; };
+		BE5FB54D24600DC8008A41FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB54C24600DC8008A41FA /* SceneDelegate.swift */; };
+		BE5FB54F24600DC8008A41FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB54E24600DC8008A41FA /* ViewController.swift */; };
+		BE5FB55224600DC8008A41FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB55024600DC8008A41FA /* Main.storyboard */; };
+		BE5FB55424600DCD008A41FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB55324600DCD008A41FA /* Assets.xcassets */; };
+		BE5FB55724600DCD008A41FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5FB55524600DCD008A41FA /* LaunchScreen.storyboard */; };
+		BE5FB56224600DCD008A41FA /* MyMoDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB56124600DCD008A41FA /* MyMoDemoTests.swift */; };
+		BE5FB56D24600DCD008A41FA /* MyMoDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FB56C24600DCD008A41FA /* MyMoDemoUITests.swift */; };
+		BE93490B24609A0100365C25 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93490A24609A0100365C25 /* UserDefaults.swift */; };
+		BEBD39AD24717C3B0085BDB5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD39AC24717C3B0085BDB5 /* KeyboardViewController.swift */; };
+		BEBD39B124717C3B0085BDB5 /* MyMoKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BEBD39AA24717C3B0085BDB5 /* MyMoKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEC9B71A248E250400CAD821 /* UIConfigurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC9B719248E250400CAD821 /* UIConfigurationTableViewCell.swift */; };
+		BEE97B22246023BF00B61BAB /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE97B21246023BF00B61BAB /* InputTableViewCell.swift */; };
+		BEE97B242460289100B61BAB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE97B232460289100B61BAB /* Constant.swift */; };
+		BEFBEA8E24767956009D2868 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFBEA8D24767956009D2868 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE5FB55E24600DCD008A41FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE5FB53F24600DC8008A41FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5FB54624600DC8008A41FA;
+			remoteInfo = MyMoDemo;
+		};
+		BE5FB56924600DCD008A41FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE5FB53F24600DC8008A41FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5FB54624600DC8008A41FA;
+			remoteInfo = MyMoDemo;
+		};
+		BEBD39AF24717C3B0085BDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE5FB53F24600DC8008A41FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEBD39A924717C3B0085BDB5;
+			remoteInfo = MyMoKeyboard;
+		};
+		BEC20AA8248FB82400DE2F6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC20AA4248FB82400DE2F6E /* KeyboardSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEE5A851247416E200F59E2C;
+			remoteInfo = KeyboardSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE05A473252EF651006AE641 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE05A472252EF651006AE641 /* KeyboardSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE103E7C24753DE2008FDF10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB58924600FE8008A41FA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BEBD39B124717C3B0085BDB5 /* MyMoKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE5FB54724600DC8008A41FA /* MyMoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5FB54A24600DC8008A41FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE5FB54C24600DC8008A41FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BE5FB54E24600DC8008A41FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE5FB55124600DC8008A41FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE5FB55324600DCD008A41FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE5FB55624600DCD008A41FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE5FB55824600DCD008A41FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5FB55D24600DCD008A41FA /* MyMoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5FB56124600DCD008A41FA /* MyMoDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoDemoTests.swift; sourceTree = "<group>"; };
+		BE5FB56324600DCD008A41FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5FB56824600DCD008A41FA /* MyMoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5FB56C24600DCD008A41FA /* MyMoDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoDemoUITests.swift; sourceTree = "<group>"; };
+		BE5FB56E24600DCD008A41FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE93490A24609A0100365C25 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		BEBD39AA24717C3B0085BDB5 /* MyMoKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyMoKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEBD39AC24717C3B0085BDB5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		BEBD39AE24717C3B0085BDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEBD39B524717D4D0085BDB5 /* MyMoKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyMoKeyboard.entitlements; sourceTree = "<group>"; };
+		BEC20AA4248FB82400DE2F6E /* KeyboardSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDK.xcodeproj; path = ../KeyboardSDK/KeyboardSDK.xcodeproj; sourceTree = "<group>"; };
+		BEC9B719248E250400CAD821 /* UIConfigurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigurationTableViewCell.swift; sourceTree = "<group>"; };
+		BEE97B21246023BF00B61BAB /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		BEE97B232460289100B61BAB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BEE97C1C246069C400B61BAB /* MyMoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyMoDemo.entitlements; sourceTree = "<group>"; };
+		BEFBEA8D24767956009D2868 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE5FB54424600DC8008A41FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE05A471252EF651006AE641 /* KeyboardSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB55A24600DCD008A41FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB56524600DCD008A41FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEBD39A724717C3B0085BDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE5FB53E24600DC8008A41FA = {
+			isa = PBXGroup;
+			children = (
+				BEC20AA4248FB82400DE2F6E /* KeyboardSDK.xcodeproj */,
+				BE5FB54924600DC8008A41FA /* MyMoDemo */,
+				BE5FB56024600DCD008A41FA /* MyMoDemoTests */,
+				BE5FB56B24600DCD008A41FA /* MyMoDemoUITests */,
+				BEBD39AB24717C3B0085BDB5 /* MyMoKeyboard */,
+				BE5FB54824600DC8008A41FA /* Products */,
+				BEC9B724248E9E9B00CAD821 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE5FB54824600DC8008A41FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE5FB54724600DC8008A41FA /* MyMoDemo.app */,
+				BE5FB55D24600DCD008A41FA /* MyMoDemoTests.xctest */,
+				BE5FB56824600DCD008A41FA /* MyMoDemoUITests.xctest */,
+				BEBD39AA24717C3B0085BDB5 /* MyMoKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE5FB54924600DC8008A41FA /* MyMoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BEE97C1C246069C400B61BAB /* MyMoDemo.entitlements */,
+				BE5FB54A24600DC8008A41FA /* AppDelegate.swift */,
+				BE5FB54C24600DC8008A41FA /* SceneDelegate.swift */,
+				BE5FB54E24600DC8008A41FA /* ViewController.swift */,
+				BEE97B21246023BF00B61BAB /* InputTableViewCell.swift */,
+				BEC9B719248E250400CAD821 /* UIConfigurationTableViewCell.swift */,
+				BEFBEA8D24767956009D2868 /* Extensions.swift */,
+				BEE97B232460289100B61BAB /* Constant.swift */,
+				BE93490A24609A0100365C25 /* UserDefaults.swift */,
+				BE5FB55024600DC8008A41FA /* Main.storyboard */,
+				BE5FB55324600DCD008A41FA /* Assets.xcassets */,
+				BE5FB55524600DCD008A41FA /* LaunchScreen.storyboard */,
+				BE5FB55824600DCD008A41FA /* Info.plist */,
+			);
+			path = MyMoDemo;
+			sourceTree = "<group>";
+		};
+		BE5FB56024600DCD008A41FA /* MyMoDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5FB56124600DCD008A41FA /* MyMoDemoTests.swift */,
+				BE5FB56324600DCD008A41FA /* Info.plist */,
+			);
+			path = MyMoDemoTests;
+			sourceTree = "<group>";
+		};
+		BE5FB56B24600DCD008A41FA /* MyMoDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5FB56C24600DCD008A41FA /* MyMoDemoUITests.swift */,
+				BE5FB56E24600DCD008A41FA /* Info.plist */,
+			);
+			path = MyMoDemoUITests;
+			sourceTree = "<group>";
+		};
+		BEBD39AB24717C3B0085BDB5 /* MyMoKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BEBD39B524717D4D0085BDB5 /* MyMoKeyboard.entitlements */,
+				BEBD39AC24717C3B0085BDB5 /* KeyboardViewController.swift */,
+				BEBD39AE24717C3B0085BDB5 /* Info.plist */,
+			);
+			path = MyMoKeyboard;
+			sourceTree = "<group>";
+		};
+		BEC20AA5248FB82400DE2F6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC20AA9248FB82400DE2F6E /* KeyboardSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC9B724248E9E9B00CAD821 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE5FB54624600DC8008A41FA /* MyMoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5FB57124600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemo" */;
+			buildPhases = (
+				BE5FB54324600DC8008A41FA /* Sources */,
+				BE5FB54424600DC8008A41FA /* Frameworks */,
+				BE5FB54524600DC8008A41FA /* Resources */,
+				BE5FB58924600FE8008A41FA /* Embed App Extensions */,
+				BE05A473252EF651006AE641 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEBD39B024717C3B0085BDB5 /* PBXTargetDependency */,
+			);
+			name = MyMoDemo;
+			productName = MyMoDemo;
+			productReference = BE5FB54724600DC8008A41FA /* MyMoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE5FB55C24600DCD008A41FA /* MyMoDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5FB57424600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemoTests" */;
+			buildPhases = (
+				BE5FB55924600DCD008A41FA /* Sources */,
+				BE5FB55A24600DCD008A41FA /* Frameworks */,
+				BE5FB55B24600DCD008A41FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5FB55F24600DCD008A41FA /* PBXTargetDependency */,
+			);
+			name = MyMoDemoTests;
+			productName = MyMoDemoTests;
+			productReference = BE5FB55D24600DCD008A41FA /* MyMoDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE5FB56724600DCD008A41FA /* MyMoDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5FB57724600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemoUITests" */;
+			buildPhases = (
+				BE5FB56424600DCD008A41FA /* Sources */,
+				BE5FB56524600DCD008A41FA /* Frameworks */,
+				BE5FB56624600DCD008A41FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5FB56A24600DCD008A41FA /* PBXTargetDependency */,
+			);
+			name = MyMoDemoUITests;
+			productName = MyMoDemoUITests;
+			productReference = BE5FB56824600DCD008A41FA /* MyMoDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BEBD39A924717C3B0085BDB5 /* MyMoKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEBD39B424717C3B0085BDB5 /* Build configuration list for PBXNativeTarget "MyMoKeyboard" */;
+			buildPhases = (
+				BEBD39A624717C3B0085BDB5 /* Sources */,
+				BEBD39A724717C3B0085BDB5 /* Frameworks */,
+				BEBD39A824717C3B0085BDB5 /* Resources */,
+				BE103E7C24753DE2008FDF10 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMoKeyboard;
+			productName = MyMoKeyboard;
+			productReference = BEBD39AA24717C3B0085BDB5 /* MyMoKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE5FB53F24600DC8008A41FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = Idmission;
+				TargetAttributes = {
+					BE5FB54624600DC8008A41FA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					BE5FB55C24600DCD008A41FA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BE5FB54624600DC8008A41FA;
+					};
+					BE5FB56724600DCD008A41FA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BE5FB54624600DC8008A41FA;
+					};
+					BEBD39A924717C3B0085BDB5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BE5FB54224600DC8008A41FA /* Build configuration list for PBXProject "MyMoDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE5FB53E24600DC8008A41FA;
+			productRefGroup = BE5FB54824600DC8008A41FA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BEC20AA5248FB82400DE2F6E /* Products */;
+					ProjectRef = BEC20AA4248FB82400DE2F6E /* KeyboardSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BE5FB54624600DC8008A41FA /* MyMoDemo */,
+				BE5FB55C24600DCD008A41FA /* MyMoDemoTests */,
+				BE5FB56724600DCD008A41FA /* MyMoDemoUITests */,
+				BEBD39A924717C3B0085BDB5 /* MyMoKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BEC20AA9248FB82400DE2F6E /* KeyboardSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeyboardSDK.framework;
+			remoteRef = BEC20AA8248FB82400DE2F6E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE5FB54524600DC8008A41FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5FB55724600DCD008A41FA /* LaunchScreen.storyboard in Resources */,
+				BE5FB55424600DCD008A41FA /* Assets.xcassets in Resources */,
+				BE5FB55224600DC8008A41FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB55B24600DCD008A41FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB56624600DCD008A41FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEBD39A824717C3B0085BDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE5FB54324600DC8008A41FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5FB54F24600DC8008A41FA /* ViewController.swift in Sources */,
+				BEE97B22246023BF00B61BAB /* InputTableViewCell.swift in Sources */,
+				BE93490B24609A0100365C25 /* UserDefaults.swift in Sources */,
+				BEE97B242460289100B61BAB /* Constant.swift in Sources */,
+				BE5FB54B24600DC8008A41FA /* AppDelegate.swift in Sources */,
+				BE5FB54D24600DC8008A41FA /* SceneDelegate.swift in Sources */,
+				BEC9B71A248E250400CAD821 /* UIConfigurationTableViewCell.swift in Sources */,
+				BEFBEA8E24767956009D2868 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB55924600DCD008A41FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5FB56224600DCD008A41FA /* MyMoDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5FB56424600DCD008A41FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5FB56D24600DCD008A41FA /* MyMoDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEBD39A624717C3B0085BDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEBD39AD24717C3B0085BDB5 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE5FB55F24600DCD008A41FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5FB54624600DC8008A41FA /* MyMoDemo */;
+			targetProxy = BE5FB55E24600DCD008A41FA /* PBXContainerItemProxy */;
+		};
+		BE5FB56A24600DCD008A41FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5FB54624600DC8008A41FA /* MyMoDemo */;
+			targetProxy = BE5FB56924600DCD008A41FA /* PBXContainerItemProxy */;
+		};
+		BEBD39B024717C3B0085BDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEBD39A924717C3B0085BDB5 /* MyMoKeyboard */;
+			targetProxy = BEBD39AF24717C3B0085BDB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE5FB55024600DC8008A41FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE5FB55124600DC8008A41FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE5FB55524600DCD008A41FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE5FB55624600DCD008A41FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE5FB56F24600DCD008A41FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE5FB57024600DCD008A41FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE5FB57224600DCD008A41FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyMoDemo/MyMoDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MyMoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE5FB57324600DCD008A41FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyMoDemo/MyMoDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MyMoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE5FB57524600DCD008A41FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				INFOPLIST_FILE = MyMoDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoDemo.app/MyMoDemo";
+			};
+			name = Debug;
+		};
+		BE5FB57624600DCD008A41FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				INFOPLIST_FILE = MyMoDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoDemo.app/MyMoDemo";
+			};
+			name = Release;
+		};
+		BE5FB57824600DCD008A41FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				INFOPLIST_FILE = MyMoDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoDemo;
+			};
+			name = Debug;
+		};
+		BE5FB57924600DCD008A41FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				INFOPLIST_FILE = MyMoDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoDemo;
+			};
+			name = Release;
+		};
+		BEBD39B224717C3B0085BDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyMoKeyboard/MyMoKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MyMoKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemo.MyMoKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEBD39B324717C3B0085BDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyMoKeyboard/MyMoKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = SXB7K82DRL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MyMoKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idmission.MyMoDemo.MyMoKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE5FB54224600DC8008A41FA /* Build configuration list for PBXProject "MyMoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5FB56F24600DCD008A41FA /* Debug */,
+				BE5FB57024600DCD008A41FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5FB57124600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5FB57224600DCD008A41FA /* Debug */,
+				BE5FB57324600DCD008A41FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5FB57424600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5FB57524600DCD008A41FA /* Debug */,
+				BE5FB57624600DCD008A41FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5FB57724600DCD008A41FA /* Build configuration list for PBXNativeTarget "MyMoDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5FB57824600DCD008A41FA /* Debug */,
+				BE5FB57924600DCD008A41FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEBD39B424717C3B0085BDB5 /* Build configuration list for PBXNativeTarget "MyMoKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEBD39B224717C3B0085BDB5 /* Debug */,
+				BEBD39B324717C3B0085BDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE5FB53F24600DC8008A41FA /* Project object */;
+}

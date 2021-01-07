@@ -1,0 +1,1120 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KeyboardSDK
+import AudioToolbox
+import ContactsUI
+import CoreGraphics
+import CoreLocation
+import Foundation
+@_exported import KeyboardSDK
+import Swift
+import SystemConfiguration
+import UIKit.UIGestureRecognizerSubclass
+import UIKit.UIImage
+import UIKit
+extension UIView {
+  public typealias TapAction = () -> Swift.Void
+  public func addTapAction(numberOfTapsRequired: Swift.Int = 1, action: @escaping UIKit.UIView.TapAction)
+  public func removeTapAction()
+}
+@objc public class OTPToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, buttonCreator: @escaping KeyboardSDK.OTPToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+@objc open class KeyboardParentViewController : KeyboardSDK.KeyboardInputViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  public func initKeyboardSDK(enableMyMo: Swift.String, applicationCode: Swift.String, senderName: Swift.String, loginID: Swift.String, Password: Swift.String, MerchantID: Swift.String, PhoneNumber: Swift.String, CustomerCode: Swift.String, CountryCode: Swift.String, CurrencyCode: Swift.String, minimumAmount: Swift.String, maximumAmount: Swift.String, languageCode: Swift.String, apiURL: Swift.String, bankBranchCode: Swift.String, bankAccountNumber: Swift.String, receiversPhoneRequired: Swift.String, selfOTPRequired: Swift.String, selfPINRequired: Swift.String, selfPINValidationAt: Swift.String, SelfPINString: Swift.String, receiversEmailRequired: Swift.String, receiversFaceRequired: Swift.String)
+  public func initKeyboardSDK_WithUIConfiguration(enableMyMo: Swift.String, applicationCode: Swift.String, senderName: Swift.String, loginID: Swift.String, Password: Swift.String, MerchantID: Swift.String, PhoneNumber: Swift.String, CustomerCode: Swift.String, CountryCode: Swift.String, CurrencyCode: Swift.String, minimumAmount: Swift.String, maximumAmount: Swift.String, languageCode: Swift.String, apiURL: Swift.String, bankBranchCode: Swift.String, bankAccountNumber: Swift.String, receiversPhoneRequired: Swift.String, selfOTPRequired: Swift.String, selfPINRequired: Swift.String, selfPINValidationAt: Swift.String, SelfPINString: Swift.String, receiversEmailRequired: Swift.String, receiversFaceRequired: Swift.String, UIConfigDictionary: Foundation.NSMutableDictionary)
+  @objc override dynamic open func textDidChange(_ textInput: UIKit.UITextInput?)
+  @objc override dynamic open func selectionWillChange(_ textInput: UIKit.UITextInput?)
+  @objc override dynamic open func selectionDidChange(_ textInput: UIKit.UITextInput?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UITextDocumentProxy {
+  public func deleteBackward(times: Swift.Int)
+}
+extension UIImage {
+  public func copyToPasteboard(_ pasteboard: UIKit.UIPasteboard = .general) -> Swift.Bool
+}
+extension UIImage {
+  public static func setImageFromBundle(name: Swift.String) -> UIKit.UIImage?
+}
+extension UIView {
+  public typealias RepeatingAction = (() -> Swift.Void)
+  public func addRepeatingAction(initialDelay: Foundation.TimeInterval = 0.8, repeatInterval: Foundation.TimeInterval = 0.1, action: @escaping UIKit.UIView.RepeatingAction)
+  public func removeRepeatingAction()
+}
+@objc open class PINToolbarTextfield : UIKit.UIView {
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var PINTextfield: UIKit.UITextField {
+    get
+    set
+  }
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol KeyboardAlert {
+  func alert(message: Swift.String, in view: UIKit.UIView, withDuration: Swift.Double)
+}
+@objc public class PINToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, buttonCreator: @escaping KeyboardSDK.PINToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+extension CGFloat {
+  public static var standardKeyboardRowHeight: CoreGraphics.CGFloat {
+    get
+  }
+  public static var reducedKeyboardRowHeight: CoreGraphics.CGFloat {
+    get
+  }
+}
+extension UIView {
+  public static var defaultNib: UIKit.UINib {
+    get
+  }
+  public static var defaultNibName: Swift.String {
+    get
+  }
+  public static func defaultNib(in bundle: Foundation.Bundle = .main) -> UIKit.UINib
+  public static func fromNib(owner: Any, named nibName: Swift.String = defaultNibName, in bundle: Foundation.Bundle = .main) -> Self
+  public static func fromNibTyped<T>(owner: Any, named nibName: Swift.String = T.defaultNibName, in bundle: Foundation.Bundle = .main) -> T where T : UIKit.UIView
+}
+public typealias KeyboardActionRows = [KeyboardSDK.KeyboardActionRow]
+extension Array where Element == KeyboardSDK.KeyboardActionRow {
+  public static func from(_ characters: [[Swift.String]]) -> KeyboardSDK.KeyboardActionRows
+}
+extension UIView {
+  public func applyShadow(_ shadow: KeyboardSDK.Shadow)
+}
+@objc open class RepeatingGestureRecognizer : UIKit.UIGestureRecognizer {
+  public init(initialDelay: Foundation.TimeInterval = 0.8, repeatInterval: Foundation.TimeInterval = 0.1, action: @escaping () -> Swift.Void)
+  @objc override dynamic open var state: UIKit.UIGestureRecognizer.State {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  @objc override dynamic public init(target: Any?, action: ObjectiveC.Selector?)
+  @objc deinit
+}
+extension RepeatingGestureRecognizer : UIKit.UIGestureRecognizerDelegate {
+  @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public class StandardSystemAudioPlayer : KeyboardSDK.SystemAudioPlayer {
+  public func playSystemAudio(_ id: Swift.UInt32)
+  @objc deinit
+}
+extension UITextDocumentProxy {
+  public var currentWord: Swift.String? {
+    get
+  }
+  public var currentWordPreCursorPart: Swift.String? {
+    get
+  }
+  public var currentWordPostCursorPart: Swift.String? {
+    get
+  }
+  public func replaceCurrentWord(with replacement: Swift.String)
+}
+public struct AudioFeedbackConfiguration {
+  public init(inputFeedback: KeyboardSDK.AudioFeedback, deleteFeedback: KeyboardSDK.AudioFeedback, systemFeedback: KeyboardSDK.AudioFeedback)
+  public let inputFeedback: KeyboardSDK.AudioFeedback
+  public let deleteFeedback: KeyboardSDK.AudioFeedback
+  public let systemFeedback: KeyboardSDK.AudioFeedback
+  public static var noFeedback: KeyboardSDK.AudioFeedbackConfiguration {
+    get
+  }
+  public static var standard: KeyboardSDK.AudioFeedbackConfiguration {
+    get
+  }
+}
+public typealias KeyboardActionRow = [KeyboardSDK.KeyboardAction]
+extension Array where Element == KeyboardSDK.KeyboardAction {
+  public static func from(_ characters: [Swift.String]) -> KeyboardSDK.KeyboardActionRow
+}
+extension UIColor {
+  public static var clearTappable: UIKit.UIColor {
+    get
+  }
+  convenience public init(hex: Swift.String)
+}
+public protocol KeyboardStackViewComponent : KeyboardSDK.VerticalKeyboardComponent {
+}
+extension UIImage {
+  public func tinted(with color: UIKit.UIColor, blendMode: CoreGraphics.CGBlendMode) -> UIKit.UIImage?
+}
+extension Sequence where Self.Element == Swift.String {
+  public func uppercased() -> [Self.Iterator.Element]
+}
+extension Sequence where Self.Element == [Swift.String] {
+  public func uppercased() -> [Self.Iterator.Element]
+}
+@objc public class PhoneToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, buttonCreator: @escaping KeyboardSDK.PhoneToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+extension UIView.AutoresizingMask {
+  public static var centerInParent: UIKit.UIView.AutoresizingMask {
+    get
+  }
+}
+@available(*, deprecated, message: "Do not use this. Instead, make the action handler refresh autocomplete as the user types.")
+public class AutocompleteBugFixTimer {
+  public init(viewController: UIKit.UIInputViewController, tickInterval: Foundation.TimeInterval = 1, reversalInterval: Foundation.TimeInterval = 0.0001)
+  @objc deinit
+}
+@objc open class HeaderToolbarView : UIKit.UIView {
+  open var backgroundolor: UIKit.UIColor? {
+    get
+    set
+  }
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  public var MyMoDisableLabel: UIKit.UILabel {
+    get
+    set
+  }
+  public var scrollView: UIKit.UIScrollView {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIInputView : UIKit.UIInputViewAudioFeedback {
+  @objc dynamic public var enableInputClicksWhenVisible: Swift.Bool {
+    @objc get
+  }
+}
+@objc public class Toolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, buttonCreator: @escaping KeyboardSDK.Toolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+public typealias AutocompleteResponse = (KeyboardSDK.AutocompleteResult) -> Swift.Void
+public typealias AutocompleteResult = Swift.Result<[Swift.String], Swift.Error>
+public protocol AutocompleteSuggestionProvider {
+  func autocompleteSuggestions(for text: Swift.String, completion: (KeyboardSDK.AutocompleteResult) -> Swift.Void)
+  @available(*, deprecated, renamed: "autocompleteSuggestions(for:completion:)")
+  func provideAutocompleteSuggestions(for text: Swift.String, completion: (KeyboardSDK.AutocompleteResult) -> Swift.Void)
+}
+@objc open class KeyboardCenterButtonRow : UIKit.UIView, KeyboardSDK.KeyboardStackViewComponent {
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, actions: KeyboardSDK.KeyboardActionRow, alignment: UIKit.UIStackView.Alignment = .center, distribution: UIKit.UIStackView.Distribution = .fillProportionally, buttonCreator: (KeyboardSDK.KeyboardAction) -> (UIKit.UIView))
+  public typealias KeyboardButtonCreator = (KeyboardSDK.KeyboardAction) -> (UIKit.UIView)
+  public var heightConstraint: UIKit.NSLayoutConstraint?
+  public var buttonStackView: UIKit.UIStackView {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol KeyboardToolbarComponent : KeyboardSDK.HorizontalKeyboardComponent {
+}
+@objc open class KeyboardSpacerView : UIKit.UIView, KeyboardSDK.KeyboardButtonRowComponent {
+  convenience public init(width: CoreGraphics.CGFloat)
+  public var widthConstraint: UIKit.NSLayoutConstraint?
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol VerticalKeyboardComponent : UIKit.UIView {
+  var heightConstraint: UIKit.NSLayoutConstraint? { get set }
+}
+extension VerticalKeyboardComponent {
+  public var height: CoreGraphics.CGFloat {
+    get
+    set
+  }
+}
+open class ToastAlert : KeyboardSDK.KeyboardAlert {
+  final public let appearance: KeyboardSDK.ToastAlert.Appearance
+  public init(appearance: KeyboardSDK.ToastAlert.Appearance = Appearance())
+  public struct Appearance {
+    public init()
+    public var backgroundColor: UIKit.UIColor
+    public var cornerRadius: CoreGraphics.CGFloat
+    public var font: UIKit.UIFont
+    public var horizontalPadding: CoreGraphics.CGFloat
+    public var textColor: UIKit.UIColor
+  }
+  open func alert(message: Swift.String, in view: UIKit.UIView, withDuration duration: Swift.Double)
+  open func processingView(showSpinner: Swift.Bool, in view: UIKit.UIView)
+  open func removeSubview(_ view: UIKit.UIView, withDuration duration: Swift.Double)
+  @objc deinit
+}
+@objc public class AmountToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = 100, buttonCreator: @escaping KeyboardSDK.AmountToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+public protocol XMLIndexerDeserializable {
+  static func deserialize(_ element: KeyboardSDK.XMLIndexer) throws -> Self
+}
+extension XMLIndexerDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLIndexer) throws -> Self
+}
+public protocol XMLElementDeserializable {
+  static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Self
+}
+extension XMLElementDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Self
+}
+public protocol XMLAttributeDeserializable {
+  static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) throws -> Self
+}
+extension XMLAttributeDeserializable {
+  public static func deserialize(attribute: KeyboardSDK.XMLAttribute) throws -> Self
+}
+extension XMLIndexer {
+  public func value<T>(ofAttribute attr: Swift.String) throws -> T where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) -> T? where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T] where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T]? where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T?] where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>() throws -> T where T : KeyboardSDK.XMLElementDeserializable
+  public func value<T>() throws -> T? where T : KeyboardSDK.XMLElementDeserializable
+  public func value<T>() throws -> [T] where T : KeyboardSDK.XMLElementDeserializable
+  public func value<T>() throws -> [T]? where T : KeyboardSDK.XMLElementDeserializable
+  public func value<T>() throws -> [T?] where T : KeyboardSDK.XMLElementDeserializable
+  public func value<T>() throws -> T where T : KeyboardSDK.XMLIndexerDeserializable
+  public func value<T>() throws -> T? where T : KeyboardSDK.XMLIndexerDeserializable
+  public func value<T>() throws -> [T] where T : KeyboardSDK.XMLIndexerDeserializable
+  public func value<T>() throws -> [T]? where T : KeyboardSDK.XMLIndexerDeserializable
+  public func value<T>() throws -> [T?] where T : KeyboardSDK.XMLIndexerDeserializable
+}
+extension XMLIndexer {
+  public func value<T, A>(ofAttribute attr: A) throws -> T where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) -> T? where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T] where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T]? where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T?] where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+}
+extension XMLElement {
+  public func value<T>(ofAttribute attr: Swift.String) throws -> T where T : KeyboardSDK.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) -> T? where T : KeyboardSDK.XMLAttributeDeserializable
+}
+extension XMLElement {
+  public func value<T, A>(ofAttribute attr: A) throws -> T where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) -> T? where T : KeyboardSDK.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+}
+public enum XMLDeserializationError : Swift.Error, Swift.CustomStringConvertible {
+  case implementationIsMissing(method: Swift.String)
+  case nodeIsInvalid(node: KeyboardSDK.XMLIndexer)
+  case nodeHasNoValue
+  case typeConversionFailed(type: Swift.String, element: KeyboardSDK.XMLElement)
+  case attributeDoesNotExist(element: KeyboardSDK.XMLElement, attribute: Swift.String)
+  case attributeDeserializationFailed(type: Swift.String, attribute: KeyboardSDK.XMLAttribute)
+  @available(*, unavailable, renamed: "implementationIsMissing(method:)")
+  public static func ImplementationIsMissing(method: Swift.String) -> KeyboardSDK.XMLDeserializationError
+  @available(*, unavailable, renamed: "nodeHasNoValue(_:)")
+  public static func NodeHasNoValue(_: KeyboardSDK.IndexOps) -> KeyboardSDK.XMLDeserializationError
+  @available(*, unavailable, renamed: "typeConversionFailed(_:)")
+  public static func TypeConversionFailed(_: KeyboardSDK.IndexingError) -> KeyboardSDK.XMLDeserializationError
+  @available(*, unavailable, renamed: "attributeDoesNotExist(_:_:)")
+  public static func AttributeDoesNotExist(_ attr: Swift.String, _ value: Swift.String) throws -> KeyboardSDK.XMLDeserializationError
+  @available(*, unavailable, renamed: "attributeDeserializationFailed(_:_:)")
+  public static func AttributeDeserializationFailed(_ attr: Swift.String, _ value: Swift.String) throws -> KeyboardSDK.XMLDeserializationError
+  public var description: Swift.String {
+    get
+  }
+}
+extension String : KeyboardSDK.XMLElementDeserializable, KeyboardSDK.XMLAttributeDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) -> Swift.String
+  public static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) -> Swift.String
+}
+extension Int : KeyboardSDK.XMLElementDeserializable, KeyboardSDK.XMLAttributeDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Swift.Int
+  public static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) throws -> Swift.Int
+}
+extension Double : KeyboardSDK.XMLElementDeserializable, KeyboardSDK.XMLAttributeDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Swift.Double
+  public static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) throws -> Swift.Double
+}
+extension Float : KeyboardSDK.XMLElementDeserializable, KeyboardSDK.XMLAttributeDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Swift.Float
+  public static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) throws -> Swift.Float
+}
+extension Bool : KeyboardSDK.XMLElementDeserializable, KeyboardSDK.XMLAttributeDeserializable {
+  public static func deserialize(_ element: KeyboardSDK.XMLElement) throws -> Swift.Bool
+  public static func deserialize(_ attribute: KeyboardSDK.XMLAttribute) throws -> Swift.Bool
+}
+extension UIScrollView {
+  public var currentPageIndex: Swift.Int {
+    get
+    set
+  }
+}
+public func printLog(_ items: Any...)
+@objc public class HeaderToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = 100, buttonCreator: @escaping KeyboardSDK.HeaderToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = 50, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+extension HapticFeedback {
+  public static var standardTapFeedback: KeyboardSDK.HapticFeedback {
+    get
+  }
+  public static var standardLongPressFeedback: KeyboardSDK.HapticFeedback {
+    get
+  }
+}
+extension UIView {
+  public func addSubview(_ subview: UIKit.UIView, fill: Swift.Bool)
+  public func addCenterSubview(_ subview: UIKit.UIView, fill: Swift.Bool, padding: CoreGraphics.CGFloat)
+  public func addTwoSubview(subview1: UIKit.UIView, subview2: UIKit.UIView, firstViewWidth_Multiplier: CoreGraphics.CGFloat, firstViewLeft_Padding: CoreGraphics.CGFloat)
+  public func addThreeSubview(subview1: UIKit.UIView, subview2: UIKit.UIView, subview3: UIKit.UIView)
+  public func addSubviewForHeader(subview1: UIKit.UIView, subview2: UIKit.UIView, subview3: UIKit.UIView, singleViewWidth: CoreGraphics.CGFloat)
+  public func addTrailingSubview(_ subview: UIKit.UIView, width: CoreGraphics.CGFloat, height: CoreGraphics.CGFloat? = nil)
+}
+@objc open class KeyboardButtonRow : UIKit.UIView, KeyboardSDK.KeyboardStackViewComponent {
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, actions: KeyboardSDK.KeyboardActionRow, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually, buttonCreator: (KeyboardSDK.KeyboardAction) -> (UIKit.UIView))
+  public typealias KeyboardButtonCreator = (KeyboardSDK.KeyboardAction) -> (UIKit.UIView)
+  public var heightConstraint: UIKit.NSLayoutConstraint?
+  public var buttonStackView: UIKit.UIStackView {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct HapticFeedbackConfiguration {
+  public init(tapFeedback: KeyboardSDK.HapticFeedback, longPressFeedback: KeyboardSDK.HapticFeedback, repeatFeedback: KeyboardSDK.HapticFeedback)
+  public let tapFeedback: KeyboardSDK.HapticFeedback
+  public let longPressFeedback: KeyboardSDK.HapticFeedback
+  public let repeatFeedback: KeyboardSDK.HapticFeedback
+  public static var noFeedback: KeyboardSDK.HapticFeedbackConfiguration {
+    get
+  }
+  public static var standard: KeyboardSDK.HapticFeedbackConfiguration {
+    get
+  }
+}
+@objc public class AutocompleteToolbar : KeyboardSDK.KeyboardToolbar {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, buttonCreator: @escaping KeyboardSDK.AutocompleteToolbar.ButtonCreator, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  convenience public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, textDocumentProxy: UIKit.UITextDocumentProxy, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public typealias ButtonCreator = (Swift.String) -> (UIKit.UIView)
+  public func reset()
+  public func update(with suggestions: [Swift.String])
+  override public init(height: CoreGraphics.CGFloat = super, alignment: UIKit.UIStackView.Alignment = super, distribution: UIKit.UIStackView.Distribution = super)
+  @objc deinit
+}
+public protocol KeyboardActionHandler : AnyObject {
+  func handleTap(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  func handleRepeat(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  func handleLongPress(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+}
+public enum KeyboardType : Swift.Equatable {
+  case alphabetic(uppercased: Swift.Bool), numeric, symbolic, email, emojis, images, custom(_: Swift.String)
+  public static func == (a: KeyboardSDK.KeyboardType, b: KeyboardSDK.KeyboardType) -> Swift.Bool
+}
+extension UIStackView {
+  public func addArrangedSubviews(_ subviews: [UIKit.UIView])
+  public func removeArrangedSubviews(_ subviews: [UIKit.UIView])
+  public func removeAllArrangedSubviews()
+}
+extension Array {
+  public func appending(_ newElement: Element) -> Swift.Array<Element>
+}
+public protocol SystemAudioPlayer {
+  func playSystemAudio(_ id: Swift.UInt32)
+}
+public enum KeyboardShiftState {
+  case lowercased, uppercased, capsLocked
+  public static func == (a: KeyboardSDK.KeyboardShiftState, b: KeyboardSDK.KeyboardShiftState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension KeyboardShiftState {
+  public var isUppercased: Swift.Bool {
+    get
+  }
+}
+@objc open class StandardKeyboardActionHandler : ObjectiveC.NSObject, KeyboardSDK.KeyboardActionHandler {
+  public init(inputViewController: UIKit.UIInputViewController, hapticConfiguration: KeyboardSDK.HapticFeedbackConfiguration = .noFeedback, audioConfiguration: KeyboardSDK.AudioFeedbackConfiguration = .standard)
+  weak public var inputViewController: UIKit.UIInputViewController? {
+    get
+    }
+  public var textDocumentProxy: UIKit.UITextDocumentProxy? {
+    get
+  }
+  public typealias GestureAction = (() -> Swift.Void)
+  open func action(for gesture: KeyboardSDK.KeyboardGesture, action: KeyboardSDK.KeyboardAction, view: UIKit.UIView) -> KeyboardSDK.StandardKeyboardActionHandler.GestureAction?
+  open func longPressAction(for action: KeyboardSDK.KeyboardAction, view: UIKit.UIView) -> KeyboardSDK.StandardKeyboardActionHandler.GestureAction?
+  open func repeatAction(for action: KeyboardSDK.KeyboardAction, view: UIKit.UIView) -> KeyboardSDK.StandardKeyboardActionHandler.GestureAction?
+  open func tapAction(for action: KeyboardSDK.KeyboardAction, view: UIKit.UIView) -> KeyboardSDK.StandardKeyboardActionHandler.GestureAction?
+  open func handle(_ gesture: KeyboardSDK.KeyboardGesture, on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  open func handleLongPress(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  open func handleRepeat(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  open func handleTap(on action: KeyboardSDK.KeyboardAction, view: UIKit.UIView)
+  open func animationButtonTap(for view: UIKit.UIView)
+  open func triggerAudioFeedback(for action: KeyboardSDK.KeyboardAction)
+  open func triggerHapticFeedback(for gesture: KeyboardSDK.KeyboardGesture, on action: KeyboardSDK.KeyboardAction)
+  @available(*, deprecated, message: "Use configuration-based init instead")
+  public init(inputViewController: UIKit.UIInputViewController, tapHapticFeedback: KeyboardSDK.HapticFeedback = .none, longPressHapticFeedback: KeyboardSDK.HapticFeedback = .none, repeatHapticFeedback: KeyboardSDK.HapticFeedback = .none)
+  @available(*, deprecated, message: "Use triggerHapticFeedback(for:on:) instead")
+  open func giveHapticFeedbackForLongPress(on action: KeyboardSDK.KeyboardAction)
+  @available(*, deprecated, message: "Use triggerHapticFeedback(for:on:) instead")
+  open func giveHapticFeedbackForRepeat(on action: KeyboardSDK.KeyboardAction)
+  @available(*, deprecated, message: "Use triggerHapticFeedback(for:on:) instead")
+  open func giveHapticFeedbackForTap(on action: KeyboardSDK.KeyboardAction)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIInputViewController {
+  @available(*, deprecated, message: "Do not use this. Instead, make the action handler refresh autocomplete as the user types.")
+  public func createAutocompleteBugFixTimer(withTickInterval tickInterval: Foundation.TimeInterval = 1, reversalInterval: Foundation.TimeInterval = 0.0001) -> KeyboardSDK.AutocompleteBugFixTimer
+}
+public class SWXMLHashOptions {
+  public var shouldProcessLazily: Swift.Bool
+  public var shouldProcessNamespaces: Swift.Bool
+  public var caseInsensitive: Swift.Bool
+  public var encoding: Swift.String.Encoding
+  public var userInfo: [Swift.CodingUserInfoKey : Any]
+  public var detectParsingErrors: Swift.Bool
+  @objc deinit
+}
+public class SWXMLHash {
+  public class func config(_ configAction: (KeyboardSDK.SWXMLHashOptions) -> Swift.Void) -> KeyboardSDK.SWXMLHash
+  public func parse(_ xml: Swift.String) -> KeyboardSDK.XMLIndexer
+  public func parse(_ data: Foundation.Data) -> KeyboardSDK.XMLIndexer
+  public class func parse(_ xml: Swift.String) -> KeyboardSDK.XMLIndexer
+  public class func parse(_ data: Foundation.Data) -> KeyboardSDK.XMLIndexer
+  public class func lazy(_ xml: Swift.String) -> KeyboardSDK.XMLIndexer
+  public class func lazy(_ data: Foundation.Data) -> KeyboardSDK.XMLIndexer
+  @objc deinit
+}
+public class IndexOp {
+  @objc deinit
+}
+public class IndexOps {
+  @objc deinit
+}
+public struct ParsingError : Swift.Error {
+  public let line: Swift.Int
+  public let column: Swift.Int
+}
+public enum IndexingError : Swift.Error {
+  case attribute(attr: Swift.String)
+  case attributeValue(attr: Swift.String, value: Swift.String)
+  case key(key: Swift.String)
+  case index(idx: Swift.Int)
+  case initialize(instance: Swift.AnyObject)
+  case encoding
+  case error
+  @available(*, unavailable, renamed: "attribute(attr:)")
+  public static func Attribute(attr: Swift.String) -> KeyboardSDK.IndexingError
+  @available(*, unavailable, renamed: "attributeValue(attr:value:)")
+  public static func AttributeValue(attr: Swift.String, value: Swift.String) -> KeyboardSDK.IndexingError
+  @available(*, unavailable, renamed: "key(key:)")
+  public static func Key(key: Swift.String) -> KeyboardSDK.IndexingError
+  @available(*, unavailable, renamed: "index(idx:)")
+  public static func Index(idx: Swift.Int) -> KeyboardSDK.IndexingError
+  @available(*, unavailable, renamed: "initialize(instance:)")
+  public static func Init(instance: Swift.AnyObject) -> KeyboardSDK.IndexingError
+  @available(*, unavailable, renamed: "error")
+  public static var Error: KeyboardSDK.IndexingError {
+    get
+  }
+}
+public enum XMLIndexer {
+  case element(KeyboardSDK.XMLElement)
+  case list([KeyboardSDK.XMLElement])
+  case stream(KeyboardSDK.IndexOps)
+  case xmlError(KeyboardSDK.IndexingError)
+  case parsingError(KeyboardSDK.ParsingError)
+  @available(*, unavailable, renamed: "element(_:)")
+  public static func Element(_: KeyboardSDK.XMLElement) -> KeyboardSDK.XMLIndexer
+  @available(*, unavailable, renamed: "list(_:)")
+  public static func List(_: [KeyboardSDK.XMLElement]) -> KeyboardSDK.XMLIndexer
+  @available(*, unavailable, renamed: "stream(_:)")
+  public static func Stream(_: KeyboardSDK.IndexOps) -> KeyboardSDK.XMLIndexer
+  @available(*, unavailable, renamed: "xmlError(_:)")
+  public static func XMLError(_: KeyboardSDK.IndexingError) -> KeyboardSDK.XMLIndexer
+  @available(*, unavailable, renamed: "withAttribute(_:_:)")
+  public static func withAttr(_ attr: Swift.String, _ value: Swift.String) throws -> KeyboardSDK.XMLIndexer
+  public var element: KeyboardSDK.XMLElement? {
+    get
+  }
+  public var all: [KeyboardSDK.XMLIndexer] {
+    get
+  }
+  public var children: [KeyboardSDK.XMLIndexer] {
+    get
+  }
+  @available(*, unavailable, renamed: "filterChildren(_:)")
+  public func filter(_ included: (KeyboardSDK.XMLElement, Swift.Int) -> Swift.Bool) -> KeyboardSDK.XMLIndexer
+  public func filterChildren(_ included: (KeyboardSDK.XMLElement, Swift.Int) -> Swift.Bool) -> KeyboardSDK.XMLIndexer
+  public func filterAll(_ included: (KeyboardSDK.XMLElement, Swift.Int) -> Swift.Bool) -> KeyboardSDK.XMLIndexer
+  public var userInfo: [Swift.CodingUserInfoKey : Any] {
+    get
+  }
+  public func withAttribute(_ attr: Swift.String, _ value: Swift.String) throws -> KeyboardSDK.XMLIndexer
+  public init(_ rawObject: Swift.AnyObject) throws
+  public init(_ elem: KeyboardSDK.XMLElement)
+  public func byKey(_ key: Swift.String) throws -> KeyboardSDK.XMLIndexer
+  public subscript(key: Swift.String) -> KeyboardSDK.XMLIndexer {
+    get
+  }
+  public func byIndex(_ index: Swift.Int) throws -> KeyboardSDK.XMLIndexer
+  public subscript(index: Swift.Int) -> KeyboardSDK.XMLIndexer {
+    get
+  }
+}
+extension XMLIndexer : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension IndexingError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol XMLContent : Swift.CustomStringConvertible {
+}
+public class TextElement : KeyboardSDK.XMLContent {
+  final public let text: Swift.String
+  @objc deinit
+}
+public struct XMLAttribute {
+  public let name: Swift.String
+  public let text: Swift.String
+}
+public class XMLElement : KeyboardSDK.XMLContent {
+  final public let name: Swift.String
+  public var caseInsensitive: Swift.Bool {
+    get
+  }
+  public var allAttributes: [Swift.String : KeyboardSDK.XMLAttribute]
+  public func attribute(by name: Swift.String) -> KeyboardSDK.XMLAttribute?
+  public var text: Swift.String {
+    get
+  }
+  public var recursiveText: Swift.String {
+    get
+  }
+  public var innerXML: Swift.String {
+    get
+  }
+  public var children: [KeyboardSDK.XMLContent]
+  @objc deinit
+}
+extension TextElement : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension XMLAttribute : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension XMLElement : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SWXMLHash {
+  public typealias XMLElement = KeyboardSDK.SWXMLHashXMLElement
+}
+public typealias SWXMLHashXMLElement = KeyboardSDK.XMLElement
+extension XMLIndexer {
+  public func withAttribute<A, V>(_ attr: A, _ value: V) throws -> KeyboardSDK.XMLIndexer where A : Swift.RawRepresentable, V : Swift.RawRepresentable, A.RawValue == Swift.String, V.RawValue == Swift.String
+  public func byKey<K>(_ key: K) throws -> KeyboardSDK.XMLIndexer where K : Swift.RawRepresentable, K.RawValue == Swift.String
+  public subscript<K>(key: K) -> KeyboardSDK.XMLIndexer where K : Swift.RawRepresentable, K.RawValue == Swift.String {
+    get
+  }
+}
+extension XMLElement {
+  public func attribute<N>(by name: N) -> KeyboardSDK.XMLAttribute? where N : Swift.RawRepresentable, N.RawValue == Swift.String
+}
+public enum HapticFeedback : Swift.CaseIterable {
+  case error, success, warning, lightImpact, mediumImpact, heavyImpact, selectionChanged, none
+  public static func == (a: KeyboardSDK.HapticFeedback, b: KeyboardSDK.HapticFeedback) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [KeyboardSDK.HapticFeedback]
+  public static var allCases: [KeyboardSDK.HapticFeedback] {
+    get
+  }
+}
+extension HapticFeedback {
+  public func prepare()
+  public static func prepare(_ feedback: KeyboardSDK.HapticFeedback)
+  public func trigger()
+  public static func trigger(_ feedback: KeyboardSDK.HapticFeedback)
+}
+@objc open class PhoneToolbarTextfield : UIKit.UIView {
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var PhoneNoTextfield: UIKit.UITextField {
+    get
+    set
+  }
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum AudioFeedback : Swift.Equatable {
+  case input, system, delete, custom(id: Swift.UInt32), none
+  public var systemId: Swift.UInt32? {
+    get
+  }
+  public static var systemPlayer: KeyboardSDK.SystemAudioPlayer
+  public static func == (a: KeyboardSDK.AudioFeedback, b: KeyboardSDK.AudioFeedback) -> Swift.Bool
+}
+extension AudioFeedback {
+  public func trigger()
+  public static func trigger(_ feedback: KeyboardSDK.AudioFeedback)
+}
+extension UIImage {
+  public func saveToPhotos(completionTarget: Swift.AnyObject?, completionSelector: ObjectiveC.Selector?)
+}
+@objc open class KeyboardToolbar : UIKit.UIView, KeyboardSDK.KeyboardStackViewComponent {
+  public init(height: CoreGraphics.CGFloat = .standardKeyboardRowHeight, alignment: UIKit.UIStackView.Alignment = .fill, distribution: UIKit.UIStackView.Distribution = .fillEqually)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public var heightConstraint: UIKit.NSLayoutConstraint?
+  public var scrollView: UIKit.UIScrollView {
+    get
+    set
+  }
+  public var stackView: UIKit.UIStackView {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public protocol KeyboardButton : KeyboardSDK.KeyboardButtonRowComponent {
+  var action: KeyboardSDK.KeyboardAction { get }
+  var secondaryAction: KeyboardSDK.KeyboardAction? { get }
+}
+extension KeyboardButton {
+  public func animateStandardPress(factor: CoreGraphics.CGFloat = 1.18, completion: (() -> Swift.Void)? = nil)
+  public func animateStandardRelease(completion: (() -> Swift.Void)? = nil)
+  public func animateStandardTap(completion: (() -> Swift.Void)? = nil)
+}
+public enum KeyboardAction : Swift.Equatable {
+  case none, backspace, capsLock, character(Swift.String), command, custom(name: Swift.String), dismissKeyboard, escape, function, image(description: Swift.String, keyboardImageName: Swift.String, imageName: Swift.String), moveCursorBackward, moveCursorForward, newLine, option, shift, shiftDown, space, switchKeyboard, switchToKeyboard(KeyboardSDK.KeyboardType), tab
+  public static func == (a: KeyboardSDK.KeyboardAction, b: KeyboardSDK.KeyboardAction) -> Swift.Bool
+}
+extension KeyboardAction {
+  public func popupCharacterOptions() -> [Swift.String]
+  public func longPressCharacter() -> KeyboardSDK.KeyboardAction
+  public func test() -> KeyboardSDK.KeyboardAction
+  public func pressSpecialCharacter(Amount: Swift.String, ResponseURLString: Swift.String) -> KeyboardSDK.KeyboardAction
+  public var getNumberString: Swift.String {
+    get
+  }
+  public var getImageDescription: Swift.String {
+    get
+  }
+  public func returnEmpty() -> KeyboardSDK.KeyboardAction
+  public var isSend: Swift.Bool {
+    get
+  }
+  public var isHistory: Swift.Bool {
+    get
+  }
+  public var isInputAction: Swift.Bool {
+    get
+  }
+  public var isDeleteAction: Swift.Bool {
+    get
+  }
+  public var isNonTappable: Swift.Bool {
+    get
+  }
+  public var isSystemAction: Swift.Bool {
+    get
+  }
+  public var standardInputViewControllerAction: ((UIKit.UIInputViewController?) -> Swift.Void)? {
+    get
+  }
+  public var standardTextDocumentProxyAction: ((UIKit.UITextDocumentProxy?) -> Swift.Void)? {
+    get
+  }
+}
+extension UIView {
+  public typealias LongPressAction = (() -> Swift.Void)
+  public func addLongPressAction(action: @escaping UIKit.UIView.LongPressAction)
+  public func removeLongPressAction()
+}
+@objc open class AutocompleteToolbarLabel : UIKit.UIView {
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var textMargins: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var centeredLabel: UIKit.UILabel {
+    get
+    set
+  }
+  public var scrollView: UIKit.UIScrollView {
+    get
+    set
+  }
+  public var scrollViewLabel: UIKit.UILabel {
+    get
+    set
+  }
+  public var separator: KeyboardSDK.AutocompleteToolbarSeparator {
+    get
+    set
+  }
+  public func scrollToEndIfNeeded()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AutocompleteToolbarLabel {
+  public func setup()
+  public func setupSubviews()
+  public func setupSubview(_ view: UIKit.UIView)
+  public func setupTapAction()
+}
+@objc open class OTPToolbarTextfield : UIKit.UIView {
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var OTPTextfield: UIKit.UITextField {
+    get
+    set
+  }
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class KeyboardInputViewController : UIKit.UIInputViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  open func viewWillSyncWithTextDocumentProxy()
+  open var keyboardActionHandler: KeyboardSDK.KeyboardActionHandler {
+    get
+    set
+  }
+  public var keyboardStackView: UIKit.UIStackView {
+    get
+    set
+  }
+  public var keyboardCenterStackView: UIKit.UIStackView {
+    get
+    set
+  }
+  open func addKeyboardGestures(to button: KeyboardSDK.KeyboardButton)
+  @objc override dynamic open func textWillChange(_ textInput: UIKit.UITextInput?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class ToolbarLabel : UIKit.UIView {
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var textMargins: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var centeredLabel: UIKit.UILabel {
+    get
+    set
+  }
+  public var scrollView: UIKit.UIScrollView {
+    get
+    set
+  }
+  public var scrollViewLabel: UIKit.UILabel {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ToolbarLabel {
+  public func setup()
+  public func setupSubviews()
+  public func setupSubview(_ view: UIKit.UIView)
+  public func setupTapAction()
+}
+@objc open class KeyboardButtonRowCollectionView : KeyboardSDK.KeyboardCollectionView, KeyboardSDK.PagedKeyboardComponent, UIKit.UICollectionViewDelegate {
+  public init(id: Swift.String = "KeyboardButtonRowCollectionView", actions: [KeyboardSDK.KeyboardAction], configuration: KeyboardSDK.KeyboardButtonRowCollectionView.Configuration, buttonCreator: @escaping KeyboardSDK.KeyboardButtonRowCollectionView.KeyboardButtonCreator)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func layoutSubviews()
+  open func restoreCurrentPage()
+  public typealias KeyboardButtonCreator = (KeyboardSDK.KeyboardAction) -> (UIKit.UIView)
+  public struct Configuration {
+    public init(rowHeight: CoreGraphics.CGFloat, rowsPerPage: Swift.Int, buttonsPerRow: Swift.Int)
+    public let rowHeight: CoreGraphics.CGFloat
+    public let rowsPerPage: Swift.Int
+    public let buttonsPerRow: Swift.Int
+    public let pageSize: Swift.Int
+    public var totalHeight: CoreGraphics.CGFloat {
+      get
+    }
+    public static var empty: KeyboardSDK.KeyboardButtonRowCollectionView.Configuration {
+      get
+    }
+  }
+  @objc public class Layout : UIKit.UICollectionViewFlowLayout {
+    @objc override dynamic public func invalidateLayout()
+    final public let rowHeight: CoreGraphics.CGFloat
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  final public let id: Swift.String
+  final public let configuration: KeyboardSDK.KeyboardButtonRowCollectionView.Configuration
+  final public let rows: KeyboardSDK.KeyboardActionRows
+  open var canPersistPageIndex: Swift.Bool {
+    get
+  }
+  open var canRestorePageIndex: Swift.Bool {
+    get
+  }
+  public var numberOfPages: Swift.Int {
+    get
+  }
+  open func row(at indexPath: Foundation.IndexPath) -> KeyboardSDK.KeyboardActionRow
+  @objc override dynamic open func numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  @objc override open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  open func collectionView(_ collectionView: UIKit.UICollectionView, rowViewForItemAt indexPath: Foundation.IndexPath) -> KeyboardSDK.KeyboardButtonRow
+  @objc open func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  override public init(actions: [KeyboardSDK.KeyboardAction])
+  @objc deinit
+}
+@objc open class KeyboardCollectionView : UIKit.UICollectionView, KeyboardSDK.KeyboardStackViewComponent, UIKit.UICollectionViewDataSource {
+  public init(actions: [KeyboardSDK.KeyboardAction])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  final public let actions: [KeyboardSDK.KeyboardAction]
+  final public let cellIdentifier: Swift.String
+  public var heightConstraint: UIKit.NSLayoutConstraint?
+  open func refresh()
+  @objc open func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @objc deinit
+}
+public enum KeyboardSetting : Swift.String {
+  case currentPageIndex
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension KeyboardSetting {
+  public var key: Swift.String {
+    get
+  }
+  public func key(for id: Swift.String) -> Swift.String
+}
+@objc open class KeyboardButtonView : UIKit.UIButton, KeyboardSDK.KeyboardButton {
+  public var action: KeyboardSDK.KeyboardAction {
+    get
+    }
+  public var secondaryAction: KeyboardSDK.KeyboardAction? {
+    get
+    }
+  public var keyboardAppearance: UIKit.UIKeyboardAppearance {
+    get
+    }
+  public var widthConstraint: UIKit.NSLayoutConstraint?
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  open func setup(with action: KeyboardSDK.KeyboardAction, secondaryAction: KeyboardSDK.KeyboardAction? = nil, in viewController: KeyboardSDK.KeyboardInputViewController)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIImage {
+  public func resized(to newSize: CoreGraphics.CGSize) -> UIKit.UIImage?
+  public func resized(toHeight points: CoreGraphics.CGFloat) -> UIKit.UIImage?
+  public func resized(toWidth points: CoreGraphics.CGFloat) -> UIKit.UIImage?
+}
+public struct Shadow {
+  public init(alpha: Swift.Float, blur: CoreGraphics.CGFloat, color: UIKit.UIColor = .black, spread: CoreGraphics.CGFloat = 0, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat)
+  public let alpha: Swift.Float
+  public let blur: CoreGraphics.CGFloat
+  public let color: UIKit.UIColor
+  public let spread: CoreGraphics.CGFloat
+  public let x: CoreGraphics.CGFloat
+  public let y: CoreGraphics.CGFloat
+  public static var standardButtonShadow: KeyboardSDK.Shadow {
+    get
+  }
+}
+public protocol KeyboardButtonRowComponent : KeyboardSDK.HorizontalKeyboardComponent {
+}
+@objc open class AmountToolbarLabel : UIKit.UIView {
+  convenience public init(text: Swift.String, textDocumentProxy: UIKit.UITextDocumentProxy)
+  @objc override dynamic public func layoutSubviews()
+  public var text: Swift.String {
+    get
+    set
+  }
+  public var textMargins: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var amountLabel: UIKit.UILabel {
+    get
+    set
+  }
+  public var scrollView: UIKit.UIScrollView {
+    get
+    set
+  }
+  public var scrollViewLabel: UIKit.UILabel {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AmountToolbarLabel {
+  public func setup()
+  public func setupSubviews()
+  public func setupSubview(_ view: UIKit.UIView)
+  public func setupTapAction()
+}
+extension Sequence {
+  public func batched(withBatchSize size: Swift.Int) -> [[Self.Iterator.Element]]
+}
+public protocol PagedKeyboardComponent : UIKit.UIView {
+  var id: Swift.String { get }
+  var canPersistPageIndex: Swift.Bool { get }
+  var canRestorePageIndex: Swift.Bool { get }
+  var currentPageIndex: Swift.Int { get set }
+  var numberOfPages: Swift.Int { get }
+}
+extension PagedKeyboardComponent {
+  public func persistCurrentPageIndex()
+  public func restoreCurrentPageIndex()
+}
+public enum KeyboardGesture {
+  case tap
+  case longPress
+  case repeatPress
+  public static func == (a: KeyboardSDK.KeyboardGesture, b: KeyboardSDK.KeyboardGesture) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol HorizontalKeyboardComponent : UIKit.UIView {
+  var widthConstraint: UIKit.NSLayoutConstraint? { get set }
+}
+extension HorizontalKeyboardComponent {
+  public var width: CoreGraphics.CGFloat {
+    get
+    set
+  }
+}
+@objc open class KeyboardButtonCollectionView : KeyboardSDK.KeyboardCollectionView {
+  public init(actions: [KeyboardSDK.KeyboardAction], buttonCreator: @escaping KeyboardSDK.KeyboardButtonCollectionView.KeyboardButtonCreator)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public typealias KeyboardButtonCreator = (KeyboardSDK.KeyboardAction) -> (UIKit.UIView)
+  open func action(at indexPath: Foundation.IndexPath) -> KeyboardSDK.KeyboardAction
+  @objc override open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  override public init(actions: [KeyboardSDK.KeyboardAction])
+  @objc deinit
+}
+public enum Model : Swift.String {
+  case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadAir3, iPad5, iPad6, iPad7, iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadPro9_7, iPadPro10_5, iPadPro11, iPadPro12_9, iPadPro2_12_9, iPadPro3_12_9, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhoneSE, iPhone7, iPhone7Plus, iPhone8, iPhone8Plus, iPhoneX, iPhoneXS, iPhoneXSMax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, iPhoneSE2, AppleTV, AppleTV_4K, unrecognized
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class AutocompleteToolbarSeparator : UIKit.UIView {
+  @objc override dynamic public func willMove(toWindow window: UIKit.UIWindow?)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension KeyboardSDK.HapticFeedback : Swift.Equatable {}
+extension KeyboardSDK.HapticFeedback : Swift.Hashable {}
+extension KeyboardSDK.KeyboardShiftState : Swift.Hashable {}
+extension KeyboardSDK.KeyboardSetting : Swift.Equatable {}
+extension KeyboardSDK.KeyboardSetting : Swift.Hashable {}
+extension KeyboardSDK.KeyboardSetting : Swift.RawRepresentable {}
+extension KeyboardSDK.KeyboardGesture : Swift.Equatable {}
+extension KeyboardSDK.KeyboardGesture : Swift.Hashable {}
+extension KeyboardSDK.Model : Swift.Equatable {}
+extension KeyboardSDK.Model : Swift.Hashable {}
+extension KeyboardSDK.Model : Swift.RawRepresentable {}
